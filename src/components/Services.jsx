@@ -3,7 +3,6 @@ import ServiceCard from "./ServiceCard";
 import app from "../assets/app.jpg";
 import make from "../assets/make.png";
 import cafe from "../assets/cafe.jpg";
-import image from "../assets/image.jpeg";
 import nails from "../assets/nails.jpg";
 import digital from "../assets/digital.jpg";
 import Header from "./Header";
