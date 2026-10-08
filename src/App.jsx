@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useEffect } from "react";
 import "./App.css";
 import Booking from "./components/Booking";
@@ -9,7 +8,8 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
-import Gallery from "./components/Gallery";
+import ScrollReveal from "./components/ScrollReveal";
+import BackToTop from "./components/BackToTop";
 
 function App() {
   useEffect(() => {
@@ -27,16 +27,28 @@ function App() {
       <NavBar />
 
       <main>
-        <Hero />
-        <Offers />
-        <About />
-        <Services />
-        <Gallery />
-        <Booking />
-        <Contact />
+        <ScrollReveal>
+          <Hero />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Offers />
+        </ScrollReveal>
+        <ScrollReveal>
+          <About />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Services />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Booking />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Contact />
+        </ScrollReveal>
       </main>
 
       <Footer />
+      <BackToTop />
     </>
   );
 }

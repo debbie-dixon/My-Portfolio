@@ -8,10 +8,21 @@ export default function Booking() {
     name: "",
     email: "",
     message: "",
+    services: [],
   });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleServiceChange = (e) => {
+    const { checked, value } = e.target;
+    setFormData((currentFormData) => ({
+      ...currentFormData,
+      services: checked
+        ? [...currentFormData.services, value]
+        : currentFormData.services.filter((service) => service !== value),
+    }));
   };
 
   const handleSubmit = async (e) => {
@@ -37,6 +48,7 @@ export default function Booking() {
         body: JSON.stringify({
           access_key: apiKey,
           ...formData,
+          services: formData.services.join(", "),
         }),
       });
 
@@ -44,7 +56,7 @@ export default function Booking() {
 
       if (result.success) {
         setStatus("success");
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", message: "", services: [] });
       } else {
         setStatus("error");
       }
@@ -55,13 +67,13 @@ export default function Booking() {
 
   return (
     <>
-      <Header text="Contact Us" id="book" />
-      <div className="max-w-xl mx-auto bg-white p-8 rounded-2xl border border-slate-200 shadow-xs my-8">
+      <Header text="Work with me" id="book" />
+      <div className="max-w-xl mx-auto bg-pink-200 p-8 rounded-2xl border border-slate-200 shadow-xs my-8">
         <h2 className="text-2xl font-bold text-slate-900 mb-2">
-          Send us a message
+          Send me a message
         </h2>
         <p className="text-slate-600 mb-6 text-sm">
-          Fill out the form below and we will respond to your email as soon as
+          Fill out the form below and I will respond to your email as soon as
           possible.
         </p>
 
@@ -95,7 +107,7 @@ export default function Booking() {
               value={formData.name}
               onChange={handleChange}
               placeholder="John Doe"
-              className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-hidden focus:ring-2 focus:ring-slate-900 text-sm"
+              className="w-full px-4 py-2.5 rounded-lg border-2 border-pink-300 focus:outline-hidden focus:ring-2 focus:ring-slate-900 text-sm"
             />
           </div>
 
@@ -110,9 +122,33 @@ export default function Booking() {
               value={formData.email}
               onChange={handleChange}
               placeholder="john@example.com"
-              className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-hidden focus:ring-2 focus:ring-slate-900 text-sm"
+              className="w-full px-4 py-2.5 rounded-lg border-2 border-pink-300 focus:outline-hidden focus:ring-2 focus:ring-slate-900 text-sm"
             />
           </div>
+
+          <fieldset>
+            <legend className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">
+              Services
+            </legend>
+            <div className="flex flex-wrap gap-x-6 gap-y-2">
+              {["Web", "App", "Automation"].map((service) => (
+                <label
+                  key={service}
+                  className="inline-flex items-center gap-2 text-sm text-slate-700"
+                >
+                  <input
+                    type="checkbox"
+                    name="services"
+                    value={service}
+                    checked={formData.services.includes(service)}
+                    onChange={handleServiceChange}
+                    className="size-4 accent-pink-900"
+                  />
+                  {service}
+                </label>
+              ))}
+            </div>
+          </fieldset>
 
           <div>
             <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
@@ -125,14 +161,14 @@ export default function Booking() {
               value={formData.message}
               onChange={handleChange}
               placeholder="How can we help you?"
-              className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-hidden focus:ring-2 focus:ring-slate-900 text-sm resize-none"
+              className="w-full px-4 py-2.5 rounded-lg border-2 border-pink-300 focus:outline-hidden focus:ring-2 focus:ring-slate-900 text-sm resize-none"
             ></textarea>
           </div>
 
           <button
             type="submit"
             disabled={status === "sending"}
-            className="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-medium px-4 py-3 rounded-lg text-sm transition-colors disabled:opacity-50"
+            className="w-full inline-flex items-center justify-center gap-2 bg-pink-900 hover:bg-pink-800 text-white font-medium px-4 py-3 rounded-lg text-sm transition-colors disabled:opacity-50"
           >
             {status === "sending" ? (
               <>
