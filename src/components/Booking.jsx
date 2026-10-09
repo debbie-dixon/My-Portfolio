@@ -168,7 +168,7 @@ export default function Booking() {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="w-full inline-flex items-center justify-center gap-2 bg-pink-900 hover:bg-pink-800 text-white font-medium px-4 py-3 rounded-lg text-sm transition-colors disabled:opacity-50"
+            className="w-full inline-flex items-center justify-center gap-2 bg-pink-600 hover:bg-pink-700 text-white font-medium px-4 py-3 rounded-lg text-sm transition-colors disabled:opacity-50"
           >
             {status === "sending" ? (
               <>

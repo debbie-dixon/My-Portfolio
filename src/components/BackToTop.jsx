@@ -31,7 +31,7 @@ export default function BackToTop() {
       aria-label="Back to top"
       title="Back to top"
       tabIndex={isVisible ? 0 : -1}
-      className={`fixed bottom-6 right-6 z-50 grid size-12 place-items-center rounded-full bg-pink-900 text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-pink-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-900 ${isVisible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-3 opacity-0"}`}
+      className={`fixed bottom-6 right-6 z-50 grid size-12 place-items-center rounded-full bg-pink-600 text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-pink-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600 ${isVisible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-3 opacity-0"}`}
     >
       <ArrowUp aria-hidden="true" size={22} />
     </button>

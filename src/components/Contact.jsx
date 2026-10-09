@@ -16,7 +16,7 @@ export default function Contact() {
         {/* Row container: Stacked on mobile, side-by-side on desktop */}
         <div className="flex flex-col md:flex-row md:items-start items-center justify-center gap-8 md:gap-16 mt-6 w-full max-w-4xl px-4">
           <div className="flex flex-col items-center md:items-start  min-w-50">
-            <h1 className="text-pink-900 font-semibold italic text-sm">
+            <h1 className="text-pink-600 font-semibold italic text-sm">
               Connect with Me!
             </h1>
             <a
@@ -62,7 +62,9 @@ export default function Contact() {
 
           {/* Section 2: Location */}
           <section className="flex flex-col items-center space-y-2 min-w-50">
-            <DynamicIcons iconName="map-pin" size={18} />
+            <div className="flex items-center gap-2">
+              <DynamicIcons iconName="map-pin" size={18} />
+            </div>
             <h1 className="text-sm text-center leading-relaxed">
               Port-Harcourt, <br />
               Rivers State, Nigeria.

@@ -1,6 +1,6 @@
 export default function ServiceCard({ image, title, description, link, icon }) {
   return (
-    <div className="flex flex-col w-full max-w-75 overflow-hidden shadow-sm border-pink-900 border-2 rounded-tr-4xl rounded-bl-4xl rounded-md">
+    <div className="flex flex-col w-full max-w-75 overflow-hidden shadow-sm border-pink-600 border-2 rounded-tr-4xl rounded-bl-4xl rounded-md">
       {/* 1. Image (Clean and squared off at the top) */}
       <div className="relative w-full overflow-hidden bg-slate-100">
         {image ? (

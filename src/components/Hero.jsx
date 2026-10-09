@@ -1,17 +1,19 @@
-import image from "../assets/Debbie2.jpg";
+import image from "../assets/Debbie3.png";
 import Button from "./Button";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Hero() {
   return (
     <div>
       <section
         id="home"
-        className=" w-full flex flex-col md:flex-row justify-evenly items-center gap-8 pt-24 pb-16"
+        className=" w-full flex flex-col md:flex-row bg-pink-100 justify-evenly items-center gap-8 pt-24 pb-16"
       >
-        <div className="flex flex-col items-center sm:items-start">
-          <div className="font-serif text-6xl text-pink-900 text-center sm:text-start leading-none">
+        <div className="flex flex-col items-center justify-center sm:items-start">
+          <div className="font-serif text-7xl text-pink-600 text-center sm:text-start leading-none">
             ITGirlDebbie
-            <p className=" text-[11px] mt-4 md:text-base font-sans font-semibold text-slate-500 uppercase tracking-widest py-2">
+            <p className=" text-[11px] mt-4 md:text-base font-sans font-bold text-slate-500 uppercase tracking-widest py-2">
               Web/App Developer & AI Automation Specialist
             </p>
           </div>
@@ -20,8 +22,9 @@ export default function Hero() {
               text="My Works"
               hover="hover:translate-y-1  hover:text-blue"
               rounded="rounded-full"
-              bgColor="transparent border-2 border-pink-300"
-              textColor="text-black"
+              bgColor="bg-pink-300"
+              // border="border-2 border-pink-600"
+              textColor="text-white"
               font="font-semibold"
               link="#services"
             />
@@ -29,18 +32,45 @@ export default function Hero() {
               text="Book Me"
               hover=" hover:translate-y-1 hover:text-blue"
               rounded="rounded-full"
-              bgColor="transparent border-2 border-blue-300"
+              bgColor="transparent border border-pink-600"
               textColor="text-black"
               font="font-semibold"
               link="#book"
             />
+          </div>
+
+          <div className="flex gap-4 mt-6">
+            <a
+              href="https://www.linkedin.com/in/itgirldebbie"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-600 hover:text-blue transition-colors duration-300"
+            >
+              <FaLinkedin className="text-2xl" />
+            </a>
+            <a
+              href="https://twitter.com/itgirldebbie"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-600 hover:text-blue transition-colors duration-300"
+            >
+              <FaXTwitter className="text-2xl" />
+            </a>
+            <a
+              href="https://github.com/debbie-dixon"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-600 hover:text-blue transition-colors duration-300"
+            >
+              <FaGithub className="text-2xl" />
+            </a>
           </div>
         </div>
 
         <img
           src={image}
           alt="Nail Art Design"
-          className=" max-w-md w-full h-auto object-cover rounded-4xl  sm:w-lg"
+          className=" max-w-md w-full h-auto object-cover  sm:w-lg"
         />
       </section>
     </div>
