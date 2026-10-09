@@ -8,9 +8,15 @@ export default function Hero() {
     <div>
       <section
         id="home"
-        className=" w-full flex flex-col md:flex-row bg-pink-100 justify-evenly items-center gap-8 pt-24 pb-16"
+        className="w-full flex flex-col md:flex-row bg-pink-100 justify-evenly items-center gap-8 pt-24 pb-16"
       >
-        <div className="flex flex-col items-center justify-center sm:items-start">
+        <img
+          src={image}
+          alt="Nail Art Design"
+          className="order-1 max-w-md w-full h-auto object-cover sm:w-lg md:order-2"
+        />
+
+        <div className="order-2 flex flex-col items-center justify-center sm:items-start md:order-1">
           <div className="font-serif text-7xl text-pink-600 text-center sm:text-start leading-none">
             ITGirlDebbie
             <p className=" text-[11px] mt-4 md:text-base font-sans font-bold text-slate-500 uppercase tracking-widest py-2">
@@ -66,12 +72,6 @@ export default function Hero() {
             </a>
           </div>
         </div>
-
-        <img
-          src={image}
-          alt="Nail Art Design"
-          className=" max-w-md w-full h-auto object-cover  sm:w-lg"
-        />
       </section>
     </div>
   );
