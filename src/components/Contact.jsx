@@ -15,7 +15,7 @@ export default function Contact() {
       >
         {/* Row container: Stacked on mobile, side-by-side on desktop */}
         <div className="flex flex-col md:flex-row md:items-start items-center justify-center gap-8 md:gap-16 mt-6 w-full max-w-4xl px-4">
-          <div className="flex flex-col items-center md:items-start  min-w-50">
+          <div className="flex flex-col items-center md:items-center w-full md:w-auto min-w-0">
             <h1 className="text-pink-600 font-semibold italic text-sm">
               Connect with Me!
             </h1>
@@ -46,7 +46,7 @@ export default function Contact() {
           </div>
 
           {/* Section 1: Phone & Email */}
-          <section className="flex flex-col items-center md:items-start space-y-3 min-w-50">
+          <section className="flex flex-col items-center md:items-start space-y-3 w-full md:w-auto min-w-0">
             <DynamicIcons
               text="07039240928"
               iconName="phone"
@@ -61,7 +61,7 @@ export default function Contact() {
           </section>
 
           {/* Section 2: Location */}
-          <section className="flex flex-col items-center space-y-2 min-w-50">
+          <section className="flex flex-col items-center space-y-2 w-full md:w-auto min-w-0">
             <div className="flex items-center gap-2">
               <DynamicIcons iconName="map-pin" size={18} />
             </div>

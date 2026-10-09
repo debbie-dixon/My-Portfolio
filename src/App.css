@@ -1,5 +1,43 @@
 @import "tailwindcss";
 
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+#root,
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  max-width: 100%;
+}
+
 .scroll-reveal {
   opacity: 0;
   transform: translateY(1.25rem);
