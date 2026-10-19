@@ -17,7 +17,7 @@ export default function Hero() {
         />
 
         <div className="order-2 flex flex-col items-center justify-center w-full max-w-xl sm:items-start md:order-1">
-          <div className="font-serif text-5xl sm:text-7xl text-pink-600 text-center sm:text-start leading-none break-words">
+          <div className="font-serif text-5xl sm:text-7xl text-pink-600 text-center sm:text-start leading-none wrap-break-word">
             ITGirlDebbie
             <p className="text-[10px] sm:text-[11px] mt-4 md:text-base font-sans font-bold text-slate-500 uppercase tracking-widest py-2">
               Web/App Developer & AI Automation Specialist
