@@ -107,7 +107,7 @@ export default function Booking() {
               value={formData.name}
               onChange={handleChange}
               placeholder="John Doe"
-              className="w-full px-4 py-2.5 rounded-lg border-2 border-pink-300 focus:outline-hidden focus:ring-2 focus:ring-slate-900 text-sm"
+              className="w-full px-4 py-2.5 rounded-lg border-2 border-pink-300 focus:outline-hidden focus:ring-2 focus:ring-pink-700 text-sm"
             />
           </div>
 
@@ -122,7 +122,7 @@ export default function Booking() {
               value={formData.email}
               onChange={handleChange}
               placeholder="john@example.com"
-              className="w-full px-4 py-2.5 rounded-lg border-2 border-pink-300 focus:outline-hidden focus:ring-2 focus:ring-slate-900 text-sm"
+              className="w-full px-4 py-2.5 rounded-lg border-2 border-pink-300 focus:outline-hidden focus:ring-2 focus:ring-pink-700 text-sm"
             />
           </div>
 
@@ -161,7 +161,7 @@ export default function Booking() {
               value={formData.message}
               onChange={handleChange}
               placeholder="How can we help you?"
-              className="w-full px-4 py-2.5 rounded-lg border-2 border-pink-300 focus:outline-hidden focus:ring-2 focus:ring-slate-900 text-sm resize-none"
+              className="w-full px-4 py-2.5 rounded-lg border-2 border-pink-300 focus:outline-hidden focus:ring-2 focus:ring-pink-700 text-sm resize-none"
             ></textarea>
           </div>
 
