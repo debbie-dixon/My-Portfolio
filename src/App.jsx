@@ -10,7 +10,8 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import ScrollReveal from "./components/ScrollReveal";
 import BackToTop from "./components/BackToTop";
-
+import { Analytics } from '@vercel/analytics/react';
+import React from 'react';
 function App() {
   useEffect(() => {
     // If a hash exists in the URL on refresh
@@ -49,6 +50,7 @@ function App() {
 
       <Footer />
       <BackToTop />
+      <Analytics />
     </>
   );
 }
