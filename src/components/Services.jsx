@@ -3,7 +3,7 @@ import ServiceCard from "./ServiceCard";
 import app from "../assets/app.jpg";
 import make from "../assets/make.png";
 import cafe from "../assets/cafe.jpg";
-import nails from "../assets/nails.jpg";
+import kems from "../assets/kems.png";
 import digital from "../assets/digital.jpg";
 import Header from "./Header";
 import { FaArrowRight } from "react-icons/fa";
@@ -34,8 +34,8 @@ export default function Services() {
         title: "Website Integrations",
         description:
           "Reliable connections between your website, APIs, and essential services.",
-        image: nails,
-        link: "https://hema-artistry.vercel.app/",
+        image: kems,
+        link: "https://kems-electrical.vercel.app/",
       },
     ],
     "Mobile Development": [

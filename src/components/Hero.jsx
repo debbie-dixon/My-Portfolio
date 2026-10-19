@@ -8,7 +8,7 @@ export default function Hero() {
     <div>
       <section
         id="home"
-        className="w-full flex flex-col md:flex-row bg-pink-100  items-center gap-6 sm:gap-8 pt-20 sm:pt-24 pb-12 sm:pb-16 px-4 sm:px-6"
+        className="w-full flex flex-col md:flex-row bg-pink-100  items-center gap-6 sm:gap-8 pt-20 sm:pt-24 pb-12 sm:pb-16 px-4 sm:px-6 md:px-12 lg:px-20"
       >
         <img
           src={image}
